@@ -41,7 +41,7 @@ public class UserDAO {
 	//login (select 구문 걸어줘야해)
 	//login 이 성공하면 userid와 name을 리턴하고 싶어
 	//자바는 하나만 리턴할 수 있어 두개는 못해
-	//userid와 namee을 가진 DTO객체를 리턴하면돼!!
+	//userid와 name을 가진 DTO객체를 리턴하면돼!!
 	public UserDTO isLogin(String userid, String password) {
 		
 		Connection con = null;
