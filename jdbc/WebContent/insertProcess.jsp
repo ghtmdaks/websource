@@ -33,7 +33,7 @@
 	
 	//입력성공
 	if(insertFlag){
-		response.sendRedirect("index.jsp");
+		response.sendRedirect("allProcess.jsp");
 		JdbcUtil.commit(con);		
 		
 	//입력실패
