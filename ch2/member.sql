@@ -6,7 +6,7 @@ create table member(
 	gender nvarchar2(2) not null,
 	email varchar2(50) not null
 );
-insert into member values('hong123', 'hong123@', '홍길동', '남', 'hong123@gmail.com');
+insert into member values('ho', 'ho', '호승민', '남', 'ho@sm');
 
 select * from member where userid = 'hong' and password = 'hong';
 

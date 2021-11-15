@@ -10,7 +10,6 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-
 public class MemberDTO {
 	private String userid;
 	private String password;

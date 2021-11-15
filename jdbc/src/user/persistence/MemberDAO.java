@@ -1,5 +1,7 @@
 package user.persistence;
 
+import static user.persistence.JdbcUtil.*;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,10 +10,6 @@ import java.util.List;
 
 import lombok.AllArgsConstructor;
 import user.domain.MemberDTO;
-
-//클래스 안의 메소드가 static 으로만 구성되어 있다면
-//import를 static 으로 하는 것이 가능함
-import static user.persistence.JdbcUtil.*;
 
 @AllArgsConstructor
 public class MemberDAO {
