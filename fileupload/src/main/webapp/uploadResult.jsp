@@ -65,7 +65,6 @@
 			FileItem item = iter.next();
 			
 			
-			File file = null;
 			
 			//파일 데이터 인지 일반 데이턴지 분석하는거야
 			if(item.isFormField()){
@@ -76,6 +75,8 @@
 				out.print("<h3>일반 데이터</h3>");
 				out.print(fieldName+" : "+value+"<br>");
 			}else{
+				
+			
 				//타입이 파일로 넘어오는 경우
 				//요소명
 				fieldName = item.getFieldName();
@@ -84,16 +85,18 @@
 				//업로드된 파일 사이즈
 				long size = item.getSize();
 				
+				File file = null;
+				
 				if(!fileName.isEmpty()){					
-				//파일 저장
-				String path = "d:\\upload\\";
+					//파일 저장
+					String path = "d:\\upload\\";
 				
-				//중복되지 않는 고유한 키 값 생성
-				UUID uuid = UUID.randomUUID();
+					//중복되지 않는 고유한 키 값 생성
+					UUID uuid = UUID.randomUUID();
 				
-				// d:\\upload\\고유값+업로드파일명
-				file = new File(path+uuid.toString()+"_"+fileName); 
-				item.write(file);
+					// d:\\upload\\고유값+업로드파일명
+					file = new File(path+uuid.toString()+"_"+fileName); 
+					item.write(file);
 				}
 				
 				
